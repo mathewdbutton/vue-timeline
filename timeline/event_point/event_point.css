@@ -1,0 +1,16 @@
+/*
+Event point stylesheet
+*/
+
+.event-point-wrapper{
+  position: relative;
+}
+
+.event-point-wrapper .event-point-time {
+  position: absolute;
+  top: -20px;
+}
+
+.md-card-header-text {
+  width: 33%
+}

@@ -1,0 +1,12 @@
+/*
+Point of interest stylesheet
+*/
+
+.point-of-interest-wrapper{
+  position: relative;
+}
+
+.point-of-interest-wrapper .point-of-interest-time {
+  position: absolute;
+  top: -20px;
+}
