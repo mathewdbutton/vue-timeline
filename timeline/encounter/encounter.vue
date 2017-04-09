@@ -18,9 +18,8 @@
 </template>
 
 <script>
-import Connector from 'components/timeline/connector/connector'
-import timelineMixins from 'mixins/timeline_nodes'
-import mediaMixin from 'mixins/media_mixin'
+import timelineMixins from '../mixins/timeline_nodes'
+import mediaMixin from '../mixins/media_mixin'
 export default {
   mixins: [timelineMixins, mediaMixin],
   components: {

@@ -18,10 +18,10 @@
 
 <script>
   require('./timeline.css')
-  import EventPoint from './event_point/event_point'
-  import PointOfInterest from './point_of_interest/point_of_interest'
-  import Encounter from './encounter/encounter'
-  import Connector from './connector/connector'
+  import EventPoint from './event_point/event_point.vue'
+  import PointOfInterest from './point_of_interest/point_of_interest.vue'
+  import Encounter from './encounter/encounter.vue'
+  import Connector from './connector/connector.vue'
   export default {
     props: {
       allEvents: {

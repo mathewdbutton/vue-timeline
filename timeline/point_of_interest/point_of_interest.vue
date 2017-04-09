@@ -20,8 +20,8 @@
 
 <script>
 require('./point_of_interest.css')
-import timelineMixins from 'mixins/timeline_nodes'
-import mediaMixin from 'mixins/media_mixin'
+import timelineMixins from '../mixins/timeline_nodes'
+import mediaMixin from '../mixins/media_mixin'
 export default {
   mixins: [timelineMixins, mediaMixin],
   name: 'point-of-interest',

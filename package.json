@@ -2,9 +2,10 @@
   "name": "vue-timeline",
   "version": "1.0.0",
   "description": "create timelines using vuejs!",
-  "main": "./timeline/timeline.vue",
+  "main": "./dist/build.js",
   "scripts": {
-    "test": "test"
+    "start": "webpack -w",
+    "build": "webpack -p"
   },
   "keywords": [
     "timeline",
@@ -13,12 +14,22 @@
   ],
   "author": "mathew button",
   "license": "ISC",
+  "dependencies": {
+    "vue": "^2.2.1"
+  },
   "devDependencies": {
-    "babel-loader": "^6.4.1",
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.0.0",
     "babel-preset-stage-0": "^6.24.1",
-    "webpack": "^2.3.3",
-    "babel-core": "^6.0.0"
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.28.0",
+    "file-loader": "^0.9.0",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
   }
 }

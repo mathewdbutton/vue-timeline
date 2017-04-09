@@ -20,8 +20,8 @@
 
 <script>
 require('./event_point.css')
-import timelineMixins from 'mixins/timeline_nodes'
-import mediaMixin from 'mixins/media_mixin'
+import timelineMixins from '../mixins/timeline_nodes'
+import mediaMixin from '../mixins/media_mixin'
 export default {
   mixins: [timelineMixins, mediaMixin],
   name: 'event-point',
