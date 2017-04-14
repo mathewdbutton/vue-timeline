@@ -37,8 +37,8 @@
     components: {
       'event-point': EventPoint,
       'encounter': Encounter,
-      'connector': Connector,
-      'point-of-interest': PointOfInterest
+      'point-of-interest': PointOfInterest,
+        'connector': Connector
     },
     data () {
       return {

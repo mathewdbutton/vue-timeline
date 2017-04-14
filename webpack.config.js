@@ -6,7 +6,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-    entry: './index.js',
+    entry: ['./index.js'],
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
@@ -43,7 +43,10 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: 'css-loader'
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" },
+                ]
             },
         ]
     },

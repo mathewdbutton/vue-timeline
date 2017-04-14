@@ -1,55 +1,55 @@
-.timeline{
+.timeline-container{
   padding-bottom: 61px;
   height:100%;
 }
 
-.timeline .connector {
+.timeline-container .connector {
   height: 70px
 }
 
-.timeline .connector .inner-connector {
+.timeline-container .connector .inner-connector {
   margin: auto;
   width: 5px;
   height: 50px;
   background: black;
 }
 
-.timeline .inner-circle {
+.timeline-container .inner-circle {
   height: 10px;
   width: 20px;
   margin: auto;
 }
 
-.timeline .inner-circle-top {
+.timeline-container .inner-circle-top {
   border-radius: 0 0 90px 90px;
   -moz-border-radius: 0 0 90px 90px;
   -webkit-border-radius: 0 0 90px 90px;
 }
 
-.timeline .inner-circle-bottom {
+.timeline-container .inner-circle-bottom {
   border-radius: 90px 90px 0 0;
   -moz-border-radius: 90px 90px 0 0;
   -webkit-border-radius: 90px 90px 0 0;
 }
 
-.timeline .hide-event {
+.timeline-container .hide-event {
   opacity:0;
 clear: both;
 height: 0;
 overflow: hidden;
 }
 
-.timeline .event {
+.timeline-container .event {
   transition: 1.0s
 }
 
-.timeline .show-event {
+.timeline-container .show-event {
   opacity: 1;
   height: auto;
   clear: none;
 }
 
-.timeline .floating-footer {
+.timeline-container .floating-footer {
   position: fixed;
   Width: 100%;
   bottom: 0;
