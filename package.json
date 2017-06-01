@@ -15,7 +15,8 @@
   "author": "mathew button",
   "license": "ISC",
   "dependencies": {
-    "vue": "^2.2.1"
+    "vue": "^2.2.1",
+    "vuetify": "^0.12.2"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -28,10 +29,7 @@
     "file-loader": "^0.9.0",
     "style-loader": "^0.16.1",
     "vue-loader": "^11.1.4",
-    "vue-material": "^0.7.1",
-    "vue-materialize": "^1.0.0",
     "vue-template-compiler": "^2.2.1",
-    "vuetify": "^0.10.4",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
   }

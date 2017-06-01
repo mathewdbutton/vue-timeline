@@ -1,8 +1,6 @@
 <template>
-  <v-container fluid="fluid">
-    <v-row>
-      <v-col sm3="sm3"></v-col>
-      <v-col sm6="sm6">
+  <v-layout row wrap>
+      <v-flex xs6 offset-xs3>
         <div class="point-of-interest-wrapper">
           <p class="point-of-interest-time grey--text">{{dateTime}}</p>
           <v-card class="green white--text">
@@ -13,9 +11,8 @@
             </v-card-text>
           </v-card>
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+      </v-flex>
+    </v-layout>
 </template>
 
 <script>

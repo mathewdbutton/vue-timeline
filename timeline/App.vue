@@ -17,21 +17,30 @@
         data () {
             return {
                 index: 0,
-                events: {
-                    'nodes': [
-                        {
-                            'type': `encounter`,
-                            'desc': `It all began one night after frisbee`
-                        },
-                        {
-                            'type': `encounter`,
-                            'desc': `It all began one night after frisbee`
-                        },
-                        {
-                            'type': `encounter`,
-                            'desc': `It all began one night after frisbee`
-                        }]
-                },
+                events: {'nodes': [
+                    {
+                        'type': `encounter`,
+                        'desc': `It all began one night after frisbee`
+                    },
+                    {
+                        'type': `point-of-interest`,
+                        'date_time': '04/06/2015 11:25AM',
+                        'desc': 'Mathew: So about that beverage, is there a day that suits you?'
+                    },
+                    {
+                        'type': `event-point`,
+                        'title': `Euro Trip - The Netherlands - Amsterdam`,
+                        'date_time': '18/07/2016',
+                        'desc': `So that's what a coffee house is. no I don't want to see any prostitutes. there is no where that is not bikes`,
+                        'image': 'dist/Amsterdam.jpg'
+                    },
+                    {
+                        'type': `encounter`,
+                        'desc': `She made it!`,
+                        'media': 'dist/at_last.mp3'
+                    }
+
+                ]},
             }
         },
         computed: {},
