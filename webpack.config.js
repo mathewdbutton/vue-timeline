@@ -16,7 +16,8 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
-            'mixins': resolve('./timeline/mixins')
+            'mixins': resolve('./timeline/mixins'),
+            'assets': resolve('./assets')
         }
     },
     module: {
@@ -35,7 +36,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
+                test: /\.(mp3|png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?[hash]'

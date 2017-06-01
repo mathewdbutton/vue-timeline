@@ -1,11 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-import VueMaterial from 'vue-material'
 import Vuetify from 'vuetify'
 
 Vue.use(Vuetify)
-Vue.use(VueMaterial)
+
+Vue.mixin({
+    methods: {
+        getAssetUrl(url) {
+            return `/${url}`
+        }
+    }
+})
+
 
 new Vue({
     el: '#app',
