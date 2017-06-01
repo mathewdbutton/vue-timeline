@@ -2,7 +2,6 @@
     <div class="event-point-wrapper">
         <v-layout row wrap>
             <v-flex xs6 offset-xs3>
-                <p> {{getAssetUrl(image)}}</p>
                 <p class="event-point-time grey--text">{{dateTime}}</p>
                 <v-card>
                     <v-card-row class="green darken-2 white--text">

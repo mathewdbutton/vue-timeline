@@ -7,9 +7,9 @@
               <slot name="text">
                 <p class="text-xs-center title">{{desc}}</p>
               </slot>
-              <button @click="playAudio">Play</button>
-            </div>
+              </div>
           </v-card-text>
+                <v-progress-linear class="red darken-1" v-if="media" v-model="percentPlayed"></v-progress-linear>
         </v-card>
       </v-flex>
     </v-layout>
@@ -28,3 +28,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .progress-linear{
+        margin:0;
+    }
+</style>
