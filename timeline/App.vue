@@ -38,6 +38,10 @@
                         'type': `encounter`,
                         'desc': `She made it!`,
                         'media': 'dist/at_last.mp3'
+                    },
+                    {
+                        'type': `encounter`,
+                        'desc': `It all began one night after frisbee`
                     }
 
                 ]},

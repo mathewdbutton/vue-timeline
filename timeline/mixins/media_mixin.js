@@ -1,38 +1,59 @@
 // define a mixin object
 var myMixin = {
-  props: ['media'],
-  data() {
-    return {
-      audio: ''
-    }
-  },
-  watch: {
-    visible() {
-      if (this.media !== undefined) {
-        this.playAudio()
-      }
-    }
-  },
-  methods: {
-    playAudio() {
-      this.audio = new Audio(this.getAssetUrl(this.media))
-      this.audio.play()
+    props: ['media'],
+    data() {
+        return {
+            audio: '',
+            percentPlayed: 0
+        }
     },
-    stopAudio() {
-      this.fadeVolume(this.audio.pause)
+    watch: {
+        visible() {
+            if (this.media !== undefined) {
+                this.playAudio()
+            }
+        }
     },
-    fadeVolume(callback) {
-      var factor = 0.01
-      var speed = 5
-      if (this.audio.volume > factor) {
-        setTimeout(() => {
-          this.fadeVolume((this.audio.volume -= factor), callback)
-        }, speed)
-      } else {
-        (typeof (callback) !== 'function') || callback()
+    computed:{
+      time() {
+          if(this.audio !== '') {
+              return this.audio.currentTime
+          } else {
+              return 0
+          }
       }
+    },
+    created() {
+        this.audio = new Audio(this.getAssetUrl(this.media))
+    },
+    methods: {
+        playAudio() {
+            this.audio.play()
+            this.trackCurrentAudioTime()
+        },
+        trackCurrentAudioTime(){
+            if(!this.audio.ended){
+                this.percentPlayed = Math.ceil((this.audio.currentTime/this.audio.duration) * 100)
+                setTimeout(() => {
+                    this.trackCurrentAudioTime()
+                }, 200)
+            }
+        },
+        stopAudio() {
+            this.fadeVolume(this.audio.pause)
+        },
+        fadeVolume(callback) {
+            var factor = 0.01
+            var speed = 5
+            if (this.audio.volume > factor) {
+                setTimeout(() => {
+                    this.fadeVolume((this.audio.volume -= factor), callback)
+                }, speed)
+            } else {
+                (typeof (callback) !== 'function') || callback()
+            }
+        }
     }
-  }
 }
 
 export default myMixin
