@@ -23,9 +23,6 @@ var myMixin = {
           }
       }
     },
-    created() {
-        this.audio = new Audio(this.getAssetUrl(this.media))
-    },
     methods: {
         playAudio() {
             this.audio.play()
@@ -37,6 +34,8 @@ var myMixin = {
                 setTimeout(() => {
                     this.trackCurrentAudioTime()
                 }, 200)
+            } else {
+                this.percentPlayed = 100;
             }
         },
         stopAudio() {
