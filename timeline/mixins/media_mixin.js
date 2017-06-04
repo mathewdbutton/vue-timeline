@@ -14,29 +14,31 @@ var myMixin = {
             }
         }
     },
-    computed:{
-      time() {
-          if(this.audio !== '') {
-              return this.audio.currentTime
-          } else {
-              return 0
-          }
-      }
+    computed: {
+        time() {
+            if (this.audio !== '') {
+                return this.audio.currentTime
+            } else {
+                return 0
+            }
+        }
     },
     methods: {
         playAudio() {
+            this.audio = new Audio(this.getAssetUrl(this.media))
             this.audio.play()
             this.trackCurrentAudioTime()
         },
         trackCurrentAudioTime(){
-            if(!this.audio.ended){
-                this.percentPlayed = Math.ceil((this.audio.currentTime/this.audio.duration) * 100)
+            if (!this.audio.ended) {
+                this.percentPlayed = Math.ceil((this.audio.currentTime / this.audio.duration) * 100)
                 setTimeout(() => {
                     this.trackCurrentAudioTime()
                 }, 200)
             } else {
                 this.percentPlayed = 100;
             }
+
         },
         stopAudio() {
             this.fadeVolume(this.audio.pause)
