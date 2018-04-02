@@ -10,14 +10,14 @@ An attempt to build a timeline generator plugin for vueJS
 #### Timeline Element
 
 ##### Props
-######allEvents
+###### allEvents
 The JSON containing all your events
 
-######currentIndex
+###### currentIndex
 The current index to show. The timeline is only shown up to the passed in index. To allow a timeline to slowly be revealed by incrementing a number
 
 
-##Example
+## Example
 ```
 <template>
     <div id="app">
