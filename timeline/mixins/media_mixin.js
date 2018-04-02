@@ -31,7 +31,7 @@ var myMixin = {
         },
         trackCurrentAudioTime(){
             if (!this.audio.ended) {
-                this.percentPlayed = Math.ceil((this.audio.currentTime / this.audio.duration) * 100)
+                this.percentPlayed = ((this.audio.currentTime / this.audio.duration) * 100)
                 setTimeout(() => {
                     this.trackCurrentAudioTime()
                 }, 200)
