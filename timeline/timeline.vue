@@ -41,11 +41,13 @@
         'connector': Connector
     },
     data () {
-      return {
-        event_point_array: this.allEvents.nodes
-      }
+      return {}
     },
-    computed: {},
+    computed: {
+        event_point_array() {
+            return this.allEvents.nodes
+        }
+    },
     methods: {
       visible(index) {
         return index <= this.currentIndex

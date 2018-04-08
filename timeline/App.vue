@@ -3,6 +3,7 @@
         blerp
        <timeline :allEvents="events" :currentIndex="index"></timeline>
        <button @click="go">Go</button>
+       <button @click="updateEvents()">update</button>
    </div>
 </template>
 
@@ -51,6 +52,14 @@
         methods: {
             go() {
                 this.index += 1
+            },
+            updateEvents() {
+                this.events = {'nodes': [
+                    {
+                        'type': `encounter`,
+                        'desc': `blergy blerg`
+                    }
+                ]}
             }
         }
     }
