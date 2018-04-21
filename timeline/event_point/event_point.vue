@@ -4,17 +4,20 @@
             <v-flex xs6 offset-xs3>
                 <p class="event-point-time grey--text">{{dateTime}}</p>
                 <v-card>
-                    <v-card-row class="green darken-2 white--text">
-                        <v-card-title>
-                            <span class="white--text">{{title}}</span>
-                        </v-card-title>
-                    </v-card-row>
-                    <v-layout row wrap>
-                        <v-flex xs4 offset-xs4>
-                            <v-card-row :img="getAssetUrl(image)" height="200px"></v-card-row>
+                    <v-card-text class="green darken-2 white--text">
+                        <p class="white--text title">{{title}}</p>
+                    </v-card-text>
+                    <v-card :flat="true" color="green">
 
-                        </v-flex>
-                    </v-layout>
+                    </v-card>
+                    <v-card-media
+                            class="white--text"
+                            height="300px"
+                            :contain="true"
+                            :src="getAssetUrl(image)"
+                    >
+                    </v-card-media>
+
                     <v-card-text class="blue-grey darken-3 white--text">
                         <div v-text="desc"></div>
                     </v-card-text>

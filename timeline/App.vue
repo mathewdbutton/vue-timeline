@@ -1,10 +1,11 @@
 <template>
-   <div>
-        blerp
-       <timeline :allEvents="events" :currentIndex="index"></timeline>
+    <v-app>
+        <v-content>
+       <timeline :allEvents="events" :currentIndex="events.nodes.length-1"></timeline>
        <button @click="go">Go</button>
        <button @click="updateEvents()">update</button>
-   </div>
+        </v-content>
+    </v-app>
 </template>
 
 <script>
