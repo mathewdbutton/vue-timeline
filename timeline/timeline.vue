@@ -45,7 +45,7 @@
     },
     computed: {
         event_point_array() {
-            console.log("array_updated")
+            console.log(this.allEvents)
             return this.allEvents.nodes
         }
     },
