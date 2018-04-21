@@ -48,7 +48,16 @@
                 ]},
             }
         },
-        computed: {},
+        computed: {
+            event_point_array() {
+                console.log("array_updated")
+                return {'nodes': [
+                    {
+                        'type': `encounter`,
+                        'desc': `It all began one night after frisbee`
+                    }]};
+            }
+        },
         methods: {
             go() {
                 this.index += 1
